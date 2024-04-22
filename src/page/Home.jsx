@@ -99,24 +99,9 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* APOD Details */}
-      <div className="max-w-7xl mx-auto py-6 px-2 sm:px-4 lg:px-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="mb-2 text-lg font-bold">APOD Details</h2>
-          <motion.p
-            className="text-gray-800"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            {apod?.explanation}
-          </motion.p>
-        </div>
-      </div>
-
       {/* NASA Data */}
       <div className="bg-gray-900 py-12">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div className="max-w-9xl mx-auto px-2 sm:px-4 lg:px-6">
           <h2 className="text-3xl font-bold text-white mb-6">
             NASA Data Highlights
           </h2>
@@ -124,19 +109,19 @@ const Home = () => {
             {nasaData.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
-                initial={{ opacity: 0, y: 50 }}
+                className="group bg-white rounded-lg shadow-lg overflow-hidden"
+                initial={{ opacity: 1, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * index, duration: 1 }}
               >
                 <img
                   src={item.hdurl}
                   alt={item.title}
-                  className="w-full h-48 object-cover hover:opacity-75 transition-opacity duration-300"
+                  className="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300"
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-700 hidden group-hover:block">
+                  <p className="text-gray-700 opacity-1 group-hover:opacity-100 transition-opacity duration-300">
                     {item.explanation}
                   </p>
                 </div>
