@@ -120,7 +120,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-white mb-6">
             NASA Data Highlights
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {nasaData.map((item, index) => (
               <motion.div
                 key={index}
