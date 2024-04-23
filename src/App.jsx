@@ -12,6 +12,7 @@ import { getCurrentUser } from "./store/features/userSlice";
 import Info from "./page/Info";
 import CoursePage from "./page/CoursePage";
 import QuizApp from "./page/Quiz";
+import Feedback from "./page/FeedBack";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
@@ -35,6 +36,7 @@ function App() {
               <Route path="/quiz" element={<QuizApp />} />
               <Route path="/courses" element={<CoursePage />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/feedback" element={<Feedback/>} />
               <Route path="/" element={<Login />} />
               <Route path="*" element={<h1>Not found</h1>} />
             </Routes>
